@@ -1,0 +1,382 @@
+{
+    "pageCount": 1,
+    "itemCount": 5,
+    "itemsPerPage": 20,
+    "items": [
+        {
+            "id": "1",
+            "applyUrl": "",
+            "contacts": [],
+            "createdAt": "",
+            "description": "",
+            "employmentDescription": "",
+            "municipality": {
+                "id": "",
+                "name": "",
+                "county": "",
+                "_type": ""
+            },
+            "publishedAt": "",
+            "service": {
+                "id": "",
+                "name": "",
+                "_type": ""
+            },
+            "title": "Empty ad",
+            "url": null,
+            "user": {
+                "id": "",
+                "name": "",
+                "phone": null,
+                "email": "",
+                "_type": ""
+            },
+            "_type": "RecruitmentAd"
+        },
+        {
+            "id": "bb29780a-f262-4c84-b04f-553d5fec3901",
+            "applyUrl": "https://bemanna-staging.leanlink.io/public/recruitmentAds/bb29780a-f262-4c84-b04f-553d5fec3901",
+            "contacts": [
+                {
+                    "id": "35f02cdc-cc1e-420c-a55e-5c169faebca8",
+                    "email": null,
+                    "firstName": "Bella",
+                    "lastName": "Kristoffersson",
+                    "phone": null,
+                    "sort": 0,
+                    "title": null,
+                    "_type": "RecruitmentAdContact"
+                }
+            ],
+            "createdAt": "2022-04-11 05:14:37",
+            "description": "<p>Vi söker en <strong>driven sjuksköterska</strong> som kan ha många bollar i elden.</p>",
+            "employmentDescription": "Vikariat 12 månader",
+            "municipality": {
+                "id": "0180",
+                "name": "Stockholm",
+                "county": "Stockholms län",
+                "_type": "Municipality"
+            },
+            "publishedAt": "2022-04-12 00:00:00",
+            "service": {
+                "id": "2",
+                "name": "Sjuksköterska",
+                "_type": "Service"
+            },
+            "title": "Sjuksköterska till vårdavdelning",
+            "url": "http://127.0.0.1:8001/?page_id=14&adid=bb29780a-f262-4c84-b04f-553d5fec3901",
+            "user": {
+                "id": "1",
+                "name": "John Doe",
+                "phone": null,
+                "email": "user1@leanlink.io",
+                "_type": "User"
+            },
+            "_type": "RecruitmentAd"
+        },
+        {
+            "id": "bb29780a-f262-4c84-b04f-553d5fec3902",
+            "applyUrl": "https://bemanna-staging.leanlink.io/public/recruitmentAds/bb29780a-f262-4c84-b04f-553d5fec3902",
+            "contacts": [
+                {
+                    "id": "35f02cdc-cc1e-420c-a55e-5c169faebca8",
+                    "email": null,
+                    "firstName": "Bella",
+                    "lastName": "Kristoffersson",
+                    "phone": 123009213,
+                    "sort": 0,
+                    "title": null,
+                    "_type": "RecruitmentAdContact"
+                },
+                {
+                    "id": "35f02cdc-cc1e-420c-a55e-5c169faebca8",
+                    "email": null,
+                    "firstName": "Bella222",
+                    "lastName": "Kristoffersson222",
+                    "phone": 1235345345345,
+                    "sort": 0,
+                    "title": "Mrs.",
+                    "_type": "RecruitmentAdContact"
+                },
+                {
+                    "id": "35f02cdc-cc1e-420c-a55e-5c169faebca8",
+                    "email": "test@test.com",
+                    "firstName": "Bella333",
+                    "lastName": "Kristoffersson333",
+                    "phone": null,
+                    "sort": 0,
+                    "title": null,
+                    "_type": "RecruitmentAdContact"
+                }
+            ],
+            "createdAt": "2022-03-31 05:14:37",
+            "description": "Vi söker en driven läkare som kan ha många bollar i elden.",
+            "employmentDescription": "Vikariat 12 månader",
+            "municipality": {
+                "id": "0180",
+                "name": "Stockholm",
+                "county": "Stockholms län",
+                "_type": "Municipality"
+            },
+            "publishedAt": "2022-04-03 00:00:00",
+            "service": {
+                "id": "1",
+                "name": "Läkare",
+                "_type": "Service"
+            },
+            "title": "2 Läkare till vårdavdelning",
+            "url": "http://127.0.0.1:8001/?page_id=14&adid=bb29780a-f262-4c84-b04f-553d5fec3902",
+            "user": {
+                "id": "1",
+                "name": "John Doe",
+                "phone": null,
+                "email": "user1@leanlink.io",
+                "_type": "User"
+            },
+            "_type": "RecruitmentAd"
+        },
+        {
+            "id": "bb29780a-f262-4c84-b04f-553d5fec3903",
+            "applyUrl": "https://bemanna-staging.leanlink.io/public/recruitmentAds/bb29780a-f262-4c84-b04f-553d5fec3903",
+            "contacts": [],
+            "createdAt": "2022-03-13 05:14:38",
+            "description": "Vi söker en driven sjuksköterska som kan ha jättemånga bollar i elden.",
+            "employmentDescription": "Vikariat 12 månader",
+            "municipality": {
+                "id": "0181",
+                "name": "Södertälje",
+                "county": "Stockholms län",
+                "_type": "Municipality"
+            },
+            "publishedAt": "2022-03-14 00:00:00",
+            "service": {
+                "id": "2",
+                "name": "Sjuksköterska",
+                "_type": "Service"
+            },
+            "title": "Sjuksköterska till vårdavdelning",
+            "url": null,
+            "user": {
+                "id": "1",
+                "name": "John Doe",
+                "phone": null,
+                "email": "user1@leanlink.io",
+                "_type": "User"
+            },
+            "_type": "RecruitmentAd"
+        },
+        {
+            "id": "bb29780a-f262-4c84-b04f-553d5fec3904",
+            "applyUrl": "https://bemanna-staging.leanlink.io/public/recruitmentAds/bb29780a-f262-4c84-b04f-553d5fec3904",
+            "contacts": [],
+            "createdAt": "2022-04-10 05:14:38",
+            "description": "Vi söker en driven sjuksköterska som kan ha jättemånga bollar i elden.",
+            "employmentDescription": "Vikariat 12 månader",
+            "municipality": {
+                "id": "0180",
+                "name": "Stockholm",
+                "county": "Stockholms län",
+                "_type": "Municipality"
+            },
+            "publishedAt": "2022-04-16 00:00:00",
+            "service": {
+                "id": "15",
+                "name": "Barnspecialist",
+                "_type": "Service"
+            },
+            "title": "z Sjuksköterska till vårdavdelning",
+            "url": "http://127.0.0.1:8001/?page_id=14&adid=bb29780a-f262-4c84-b04f-553d5fec3904",
+            "user": {
+                "id": "1",
+                "name": "John Doe",
+                "phone": null,
+                "email": "user1@leanlink.io",
+                "_type": "User"
+            },
+            "_type": "RecruitmentAd"
+        },
+        {
+            "id": "bb2da780a-f262-4c84-b04f-553d5fec3904",
+            "applyUrl": "https://bemanna-staging.leanlink.io/public/recruitmentAds/bb29780a-f262-4c84-b04f-553d5fec3904",
+            "contacts": [],
+            "createdAt": "2022-04-10 05:14:38",
+            "description": "Vi söker en driven sjuksköterska som kan ha jättemånga bollar i elden.",
+            "employmentDescription": "Vikariat 12 månader",
+            "municipality": {
+                "id": "0180",
+                "name": "Stockholm",
+                "county": "Stockholms län",
+                "_type": "Municipality"
+            },
+            "publishedAt": "2022-04-16 00:00:00",
+            "service": {
+                "id": "15",
+                "name": "Lorem",
+                "_type": "Service"
+            },
+            "title": "Sjuksköterska till 2",
+            "url": "http://127.0.0.1:8001/?page_id=14&adid=bb29780a-f262-4c84-b04f-553d5fec3904",
+            "user": {
+                "id": "1",
+                "name": "John Doe",
+                "phone": null,
+                "email": "user1@leanlink.io",
+                "_type": "User"
+            },
+            "_type": "RecruitmentAd"
+        },
+        {
+            "id": "ab29780a-f262-4c84-b04f-553d5fec3904",
+            "applyUrl": "https://bemanna-staging.leanlink.io/public/recruitmentAds/bb29780a-f262-4c84-b04f-553d5fec3904",
+            "contacts": [],
+            "createdAt": "2022-04-10 05:14:38",
+            "description": "Vi söker en driven sjuksköterska som kan ha jättemånga bollar i elden.",
+            "employmentDescription": "Vikariat 12 månader",
+            "municipality": {
+                "id": "0180",
+                "name": "Sarajevo",
+                "county": "Sarajevo",
+                "_type": "Municipality"
+            },
+            "publishedAt": "2022-04-16 00:00:00",
+            "service": {
+                "id": "15",
+                "name": "Ipsum",
+                "_type": "Service"
+            },
+            "title": "Lorem till vårdavdelning",
+            "url": "http://127.0.0.1:8001/?page_id=14&adid=bb29780a-f262-4c84-b04f-553d5fec3904",
+            "user": {
+                "id": "1",
+                "name": "John Doe",
+                "phone": null,
+                "email": "user1@leanlink.io",
+                "_type": "User"
+            },
+            "_type": "RecruitmentAd"
+        },
+        {
+            "id": "aab2d9780a-f262-4c84-b04f-553d5fec3904",
+            "applyUrl": "https://bemanna-staging.leanlink.io/public/recruitmentAds/bb29780a-f262-4c84-b04f-553d5fec3904",
+            "contacts": [],
+            "createdAt": "2022-04-10 05:14:38",
+            "description": "Vi söker en driven sjuksköterska som kan ha jättemånga bollar i elden.",
+            "employmentDescription": "3",
+            "municipality": {
+                "id": "0180",
+                "name": "Bosna",
+                "county": "Bosna",
+                "_type": "Municipality"
+            },
+            "publishedAt": "2022-04-16 00:00:00",
+            "service": {
+                "id": "15",
+                "name": "Ipsum Lorem",
+                "_type": "Service"
+            },
+            "title": "1 Lorem ipsum",
+            "url": "http://127.0.0.1:8001/?page_id=14&adid=bb29780a-f262-4c84-b04f-553d5fec3904",
+            "user": {
+                "id": "1",
+                "name": "John Doe",
+                "phone": null,
+                "email": "user1@leanlink.io",
+                "_type": "User"
+            },
+            "_type": "RecruitmentAd"
+        },
+        {
+            "id": "aab29780a-f262-4c84-b04f-553d5fec3904",
+            "applyUrl": "https://bemanna-staging.leanlink.io/public/recruitmentAds/bb29780a-f262-4c84-b04f-553d5fec3904",
+            "contacts": [],
+            "createdAt": "2022-04-10 05:14:38",
+            "description": "Vi söker en driven sjuksköterska som kan ha jättemånga bollar i elden.",
+            "employmentDescription": "2",
+            "municipality": {
+                "id": "0180",
+                "name": "Bosna 2",
+                "county": "Bosna 2",
+                "_type": "Municipality"
+            },
+            "publishedAt": "2022-04-16 00:00:00",
+            "service": {
+                "id": "15",
+                "name": "Ipsum Lorem aaa",
+                "_type": "Service"
+            },
+            "title": "Lorem ipsum 222",
+            "url": "http://127.0.0.1:8001/?page_id=14&adid=bb29780a-f262-4c84-b04f-553d5fec3904",
+            "user": {
+                "id": "1",
+                "name": "John Doe",
+                "phone": null,
+                "email": "user1@leanlink.io",
+                "_type": "User"
+            },
+            "_type": "RecruitmentAd"
+        },
+        {
+            "id": "acb29780a-f262-4c84-b04f-553d5fec3904",
+            "applyUrl": "https://bemanna-staging.leanlink.io/public/recruitmentAds/bb29780a-f262-4c84-b04f-553d5fec3904",
+            "contacts": [],
+            "createdAt": "2022-04-10 05:14:38",
+            "description": "Vi söker en driven sjuksköterska som kan ha jättemånga bollar i elden.",
+            "employmentDescription": "1",
+            "municipality": {
+                "id": "0180",
+                "name": "Zagreb",
+                "county": "Zagreb",
+                "_type": "Municipality"
+            },
+            "publishedAt": "2022-04-16 00:00:00",
+            "service": {
+                "id": "15",
+                "name": "Ipsum Lorem 3",
+                "_type": "Service"
+            },
+            "title": "Lorem ipsum title",
+            "url": "http://127.0.0.1:8001/?page_id=14&adid=bb29780a-f262-4c84-b04f-553d5fec3904",
+            "user": {
+                "id": "1",
+                "name": "John Doe",
+                "phone": null,
+                "email": "user1@leanlink.io",
+                "_type": "User"
+            },
+            "_type": "RecruitmentAd"
+        },
+        {
+            "id": "acbdd29780a-f262-4c84-b04f-553d5fec3904",
+            "applyUrl": "https://bemanna-staging.leanlink.io/public/recruitmentAds/bb29780a-f262-4c84-b04f-553d5fec3904",
+            "contacts": [],
+            "createdAt": "2022-04-10 05:14:38",
+            "description": "Vi söker en driven sjuksköterska som kan ha jättemånga bollar i elden.",
+            "employmentDescription": "1 week",
+            "municipality": {
+                "id": "0180",
+                "name": "Berlin",
+                "county": "Berlin",
+                "_type": "Municipality"
+            },
+            "publishedAt": "2022-04-16 00:00:00",
+            "service": {
+                "id": "15",
+                "name": "Ipsum Lorem aaa3",
+                "_type": "Service"
+            },
+            "title": "Lorem ipsum title 22",
+            "url": "http://127.0.0.1:8001/?page_id=14&adid=bb29780a-f262-4c84-b04f-553d5fec3904",
+            "user": {
+                "id": "1",
+                "name": "John Doe",
+                "phone": null,
+                "email": "user1@leanlink.io",
+                "_type": "User"
+            },
+            "_type": "RecruitmentAd"
+        }
+    ],
+    "links": [],
+    "meta": null,
+    "_type": "PaginatedItems"
+}

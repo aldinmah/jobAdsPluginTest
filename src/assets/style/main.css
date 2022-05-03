@@ -1,0 +1,14 @@
+@import url("../fonts/fonts.css");
+
+* {
+    transition: all .2s ease;
+}
+body{
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;;
+}
+.floatLeft{
+    float: left;
+}
+.w100{
+    width: 100%;
+}

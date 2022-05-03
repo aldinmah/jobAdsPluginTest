@@ -1,0 +1,53 @@
+.JobAdsDetailsWrapper{
+    color: #666;
+}
+.JobAdsDetailsWrapper .fullRow{
+    width: 100%;
+    float: left;
+}
+.JobAdsDetailsWrapper .locationDurationContainer .locationBox{
+    margin-right: 20px;
+}
+.JobAdsDetailsWrapper .locationDurationContainer .locationValue,
+.JobAdsDetailsWrapper .locationDurationContainer .durationValue{
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    top: -5px;
+}
+.JobAdsDetailsWrapper .applyBtnWrapper{
+    margin: 15px 0px;
+}
+.JobAdsDetailsWrapper .applyBtnWrapper .applyBtn{
+    margin-right: 50px;
+}
+.JobAdsDetailsWrapper .contactPersonInfo{
+    margin-bottom: 20px;
+}
+.JobAdsDetailsWrapper .socialIconsWrapper .social-icon{
+    width: 40px;
+    height: 40px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    text-indent: -999em;
+    overflow: hidden;
+    margin-left: 10px;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.JobAdsDetailsWrapper .socialIconsWrapper .twitter-icon{
+    background-color: #27A0DD;
+    background-image: url('../../assets/images/social-twitter.svg');
+}
+.JobAdsDetailsWrapper .socialIconsWrapper .facebook-icon{
+    background-color: #335290;
+    background-image: url('../../assets/images/social-facebook.svg');
+}
+.JobAdsDetailsWrapper .socialIconsWrapper .linkedin-icon{
+    background-color: #2164A9;
+    background-image: url('../../assets/images/social-linkedin.svg');
+}
