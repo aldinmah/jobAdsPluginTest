@@ -1,13 +1,13 @@
-.JobAdsTableComponentWrapper .jobListRow{
+.jobAdsTableComponentWrapper .jobListRow{
     cursor: pointer;
 }
-.JobAdsTableComponentWrapper .jobListRow:hover{
+.jobAdsTableComponentWrapper .jobListRow:hover{
     background-color: rgba(0, 0, 0, 0.04);
 }
-.JobAdsTableComponentWrapper .jobListRow:hover > td{
+.jobAdsTableComponentWrapper .jobListRow:hover > td{
     text-shadow: -0.5px 0 #000000;
 }
-.JobAdsTableComponentWrapper .headerColumn{
+.jobAdsTableComponentWrapper .headerColumn{
     font-size: 1rem;
     font-weight: 600;
 }

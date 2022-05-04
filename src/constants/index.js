@@ -1,6 +1,6 @@
-export const PAGES = {
-	JOB_ADS_LIST: "job-list",
-	JOB_DETAILS: "JobAdDetails"
+export const URL_PARAMS = {
+	JOB_ADS_LIST: "joblist",
+	JOB_DETAILS: "jobadid"
 }
 
 export const JOB_IMAGES_LIST = [

@@ -1,3 +1,23 @@
+# Plugin has a configuration variable (example), enable the variable by adding this code snippet before initializing the plugin
+
+<script>
+	const jobAdsSettings = {
+		disableDynamicImagesOnJobDetails: false
+	}
+</script>
+
+cssWrapperClass : string
+-used to define a wrapper CSS class which could be used for custom styling of the widget
+
+disableDynamicImagesOnJobDetails : boolean
+-used to control the loading of dynamic (random) images on the job details screen / page
+
+companyName : string
+-used to show the company name in the job details screen / page
+
+companyDetails: string
+-used to show the company details in the job details screen / page
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -19,12 +19,11 @@ export default function JobAdsDetails(props) {
     let randomImagePath =
       JOB_IMAGES_LIST[Math.floor(Math.random() * JOB_IMAGES_LIST.length)];
     setRandomImgURL(randomImagePath);
-    
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reqParams]);
 
   return (
-    <Box className="fullRow JobAdsDetailsWrapper">
+    <Box className="fullRow jobAdsDetailsWrapper">
       <Link to="/">Back to list</Link>
       <h1 className="fullRow jobTitle">{jobAdsDetailsData?.title}</h1>
       <div className="fullRow locationDurationContainer">
@@ -61,10 +60,57 @@ export default function JobAdsDetails(props) {
           Apply for the job
         </Button>
         <div className="floatLeft socialIconsWrapper">
-			<a target="_blank" rel="noreferrer" href={"https://www.facebook.com/sharer/sharer.php?u="+window.location.href} class="" title={"Dela "+jobAdsDetailsData?.title+" på Facebook"} className="social-icon facebook-icon">Facebook</a>
-			<a target="_blank" rel="noreferrer" href={"https://www.linkedin.com/shareArticle?mini=true&url="+window.location.href} title={"Dela "+jobAdsDetailsData?.title+" på LinkedIn"} className="social-icon linkedin-icon">LinkedIn</a>
-			<a target="_blank" rel="noreferrer" href={"https://twitter.com/intent/tweet?url="+window.location.href} title={"Dela "+jobAdsDetailsData?.title+" på Twitter"} className="social-icon twitter-icon">Twitter</a>
-		</div>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={
+              "https://www.facebook.com/sharer/sharer.php?u=" +
+              window.location.href
+            }
+            title={"Dela " + jobAdsDetailsData?.title + " på Facebook"}
+            className="social-icon facebook-icon"
+          >
+            <svg width="7" height="15" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.525 14.586H1.508V7.293H0V4.779h1.508V3.27c0-2.05.852-3.27 3.27-3.27H6.79v2.514H5.533c-.941 0-1.004.352-1.004 1.007l-.004 1.258h2.281L6.54 7.293H4.525v7.293"
+                fillRule="evenodd"
+              />
+            </svg>
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={
+              "https://www.linkedin.com/shareArticle?mini=true&url=" +
+              window.location.href
+            }
+            title={"Dela " + jobAdsDetailsData?.title + " på LinkedIn"}
+            className="social-icon linkedin-icon"
+          >
+            <svg width="13" height="12" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M.159 12h2.69V3.903H.159V12zm1.345-9.202c.938 0 1.522-.621 1.522-1.399C3.01.605 2.442 0 1.522 0 .6 0 0 .605 0 1.4c0 .777.583 1.398 1.486 1.398h.018zM4.34 12s.036-7.337 0-8.096h2.692v1.173h-.019c.354-.552.992-1.363 2.443-1.363 1.77 0 3.1 1.156 3.1 3.644V12H9.862V7.669c0-1.089-.39-1.831-1.364-1.831-.743 0-1.186.5-1.38.984-.072.173-.088.415-.088.657V12H4.339z"
+                fillRule="evenodd"
+              />
+            </svg>
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={
+              "https://twitter.com/intent/tweet?url=" + window.location.href
+            }
+            title={"Dela " + jobAdsDetailsData?.title + " på Twitter"}
+            className="social-icon twitter-icon"
+          >
+            <svg width="15" height="12" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12.905 2.91c.005.126.008.254.008.382 0 3.897-2.966 8.391-8.391 8.391A8.354 8.354 0 0 1 0 10.358a5.917 5.917 0 0 0 4.367-1.222 2.951 2.951 0 0 1-2.755-2.048 2.967 2.967 0 0 0 1.331-.05A2.95 2.95 0 0 1 .578 4.146V4.11c.398.22.852.353 1.336.369A2.949 2.949 0 0 1 1 .54 8.374 8.374 0 0 0 7.08 3.622a2.95 2.95 0 0 1 5.026-2.69A5.907 5.907 0 0 0 13.98.216a2.955 2.955 0 0 1-1.297 1.631 5.876 5.876 0 0 0 1.694-.464 5.997 5.997 0 0 1-1.471 1.527"
+                fillRule="evenodd"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
 
       <div className="fullRow desriptionWrapper">
@@ -86,52 +132,66 @@ export default function JobAdsDetails(props) {
           </div>
         )}
       </div>
-      <div className="fullRow randomImageWrapper">
-        {randomImgURL && (
+      {!props.globalConfig?.disableDynamicImagesOnJobDetails && randomImgURL && (
+        <div className="fullRow randomImageWrapper">
           <img src={require("../../" + randomImgURL)} alt="random_img" />
-        )}
-      </div>
-      <div className="fullRow companyInfoWrapper">
-        <h2>TO DO About The Company</h2>
-        <span>
-          TO DO - Information about company needs to be provided by the API
-        </span>
-      </div>
-      <div className="fullRow contactInfoWrapper">
-        <h2>Contact person(s)</h2>
-        <div className="fullRow contactList">
-          {jobAdsDetailsData?.contacts &&
-            jobAdsDetailsData.contacts.map((item, index) => {
+        </div>
+      )}
+      {props.globalConfig?.companyName && (
+        <div className="fullRow companyInfoWrapper">
+          <h2 className="fullRow companyName">{props.globalConfig.companyName}</h2>
+          {props.globalConfig?.companyDetails && (
+            <div className="fullRow companyDetails">
+              {props.globalConfig.companyDetails}
+            </div>
+          )}
+        </div>
+      )}
+      {jobAdsDetailsData?.contacts && (
+        <div className="fullRow contactInfoWrapper">
+          <h2>Contact person(s)</h2>
+          <div className="fullRow contactList">
+            {jobAdsDetailsData.contacts.map((item, index) => {
               return (
-                <div className="fullRow contactPersonInfo" key={"person_"+index}>
-                    <div className="fullRow personInfoRow contactPersonName">
-                        <span  className="contactLabel">Name: </span>
-                        <span className="nameInfo">
-                            {item.title ? item.title+" " : ''}
-                            {item.firstName + " " + item.lastName}
-                        </span>
+                <div
+                  className="fullRow contactPersonInfo"
+                  key={"person_" + index}
+                >
+                  <div className="fullRow personInfoRow contactPersonName">
+                    <span className="contactLabel">Name: </span>
+                    <span className="nameInfo">
+                      {item.title ? item.title + " " : ""}
+                      {item.firstName + " " + item.lastName}
+                    </span>
+                  </div>
+                  {item?.phone && (
+                    <div className="fullRow personInfoRow contactPersonPhone">
+                      <span className="contactLabel">Phone: </span>
+                      <a
+                        href={item.phone ? "tel:" + item.phone : "#"}
+                        className="phoneInfo"
+                      >
+                        {item.phone}
+                      </a>
                     </div>
-                    {item?.phone && 
-                        <div className="fullRow personInfoRow contactPersonPhone">
-                            <span className="contactLabel">Phone: </span>
-                            <a href={item.phone ? "tel:" + item.phone : "#"} className="phoneInfo">
-                                {item.phone}
-                            </a>
-                        </div>
-                    }
-                    {item?.email && 
-                        <div className="fullRow personInfoRow contactPersonEmail">
-                            <span className="contactLabel">Email: </span>
-                            <a href={item.email ? "mailto:" + item.email : "#"} className="emailInfo">
-                                {item.email}
-                            </a>
-                        </div>
-                    }
+                  )}
+                  {item?.email && (
+                    <div className="fullRow personInfoRow contactPersonEmail">
+                      <span className="contactLabel">Email: </span>
+                      <a
+                        href={item.email ? "mailto:" + item.email : "#"}
+                        className="emailInfo"
+                      >
+                        {item.email}
+                      </a>
+                    </div>
+                  )}
                 </div>
               );
             })}
+          </div>
         </div>
-      </div>
+      )}
     </Box>
   );
 }

@@ -1,30 +1,44 @@
-.JobAdsDetailsWrapper{
+.jobAdsDetailsWrapper{
     color: #666;
 }
-.JobAdsDetailsWrapper .fullRow{
+.jobAdsDetailsWrapper .fullRow{
     width: 100%;
     float: left;
 }
-.JobAdsDetailsWrapper .locationDurationContainer .locationBox{
+.jobAdsDetailsWrapper h1,
+.jobAdsDetailsWrapper .jobTitle{
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+}
+.jobAdsDetailsWrapper h2,
+.jobAdsDetailsWrapper .descriptionTitle{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0.83em;
+    margin-bottom: 0.41em;
+}
+.jobAdsDetailsWrapper .locationBox{
     margin-right: 20px;
 }
-.JobAdsDetailsWrapper .locationDurationContainer .locationValue,
-.JobAdsDetailsWrapper .locationDurationContainer .durationValue{
+.jobAdsDetailsWrapper .locationValue,
+.jobAdsDetailsWrapper .durationValue{
     display: inline-block;
     margin-left: 10px;
     position: relative;
     top: -5px;
 }
-.JobAdsDetailsWrapper .applyBtnWrapper{
-    margin: 15px 0px;
+.jobAdsDetailsWrapper .applyBtnWrapper{
+    margin: 20px 0 5px 0;
 }
-.JobAdsDetailsWrapper .applyBtnWrapper .applyBtn{
+.jobAdsDetailsWrapper .applyBtnWrapper .applyBtn{
     margin-right: 50px;
 }
-.JobAdsDetailsWrapper .contactPersonInfo{
+.jobAdsDetailsWrapper .contactPersonInfo{
     margin-bottom: 20px;
 }
-.JobAdsDetailsWrapper .socialIconsWrapper .social-icon{
+.jobAdsDetailsWrapper .social-icon{
     width: 40px;
     height: 40px;
     -webkit-border-radius: 50%;
@@ -38,16 +52,38 @@
     float: left;
     background-repeat: no-repeat;
     background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    fill: #fff;
+    border: 2px solid transparent;
+    transition: all .1s ease;
 }
-.JobAdsDetailsWrapper .socialIconsWrapper .twitter-icon{
+.jobAdsDetailsWrapper .social-icon > svg{
+    transition: none;
+}
+.jobAdsDetailsWrapper .twitter-icon{
     background-color: #27A0DD;
-    background-image: url('../../assets/images/social-twitter.svg');
 }
-.JobAdsDetailsWrapper .socialIconsWrapper .facebook-icon{
+.jobAdsDetailsWrapper .twitter-icon:hover{
+    background-color: #fff;
+    border-color: #27A0DD;
+    fill: #27A0DD;
+}
+.jobAdsDetailsWrapper .facebook-icon{
     background-color: #335290;
-    background-image: url('../../assets/images/social-facebook.svg');
 }
-.JobAdsDetailsWrapper .socialIconsWrapper .linkedin-icon{
+.jobAdsDetailsWrapper .facebook-icon:hover{
+    background-color: #fff;
+    border-color: #335290;
+    fill: #335290;
+}
+.jobAdsDetailsWrapper .linkedin-icon{
     background-color: #2164A9;
-    background-image: url('../../assets/images/social-linkedin.svg');
+}
+.jobAdsDetailsWrapper .linkedin-icon:hover{
+    background-color: #fff;
+    border-color: #2164A9;
+    fill: #2164A9;
 }

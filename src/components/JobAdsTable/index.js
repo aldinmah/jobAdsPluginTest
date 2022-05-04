@@ -13,7 +13,7 @@ import TableSortLabel from "@mui/material/TableSortLabel";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import { visuallyHidden } from "@mui/utils";
-import { PAGES } from "../../constants";
+import { URL_PARAMS } from "../../constants";
 
 import './style.css'
 
@@ -153,20 +153,24 @@ export default function JobAdsListTable(props) {
   };
 
   const handleRowClick = (data) => {
-    navigate(PAGES.JOB_DETAILS+"/"+data.id);
+    const parser = new URL(window.location);
+    parser.searchParams.set(URL_PARAMS.JOB_DETAILS, data.id);
+    console.log(parser.href);
+    //window.location = parser.href;
+    //navigate(URL_PARAMS.JOB_DETAILS+"/"+);
   }
 
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - tableData.length) : 0;
 
   return (
-    <Box sx={{ width: "100%" }} className="JobAdsTableComponentWrapper">
-      <TableContainer className="JobAdsTableContainer">
+    <Box sx={{ width: "100%" }} className="jobAdsTableComponentWrapper">
+      <TableContainer className="jobAdsTableContainer">
         <Table
           sx={{ minWidth: 750 }}
           aria-labelledby="Jobbannonser"
           size={compactView ? "small" : "medium"}
-          className="JobAdsTable"
+          className="jobAdsTable"
         >
           <EnhancedTableHead
             order={order}

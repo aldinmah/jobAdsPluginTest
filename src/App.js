@@ -10,6 +10,7 @@ import JobAdsDetails from "./components/JobAdsDetails"
 import MOCKED_DATA from './services/API/mock_data/job-ads.json';
 
 export default function App(props) {
+  const globalConfig = (typeof jobAdsSettings !== 'undefined') ? jobAdsSettings : {}
   const [jobAdsListAPIData, setJobAdsListAPIData] = useState([]);
   const [jobAdsList, setJobAdsList] = useState([]);
 
@@ -35,7 +36,7 @@ export default function App(props) {
   }, [jobAdsListAPIData]);
 
   return (
-      <div className="JobAdsApplication">
+      <div className={"JobAdsApplication "+ (globalConfig?.cssWrapperClass ? globalConfig?.cssWrapperClass : '') }>
         <Routes>
           <Route path="/" element={
             <JobAdsListTable 
@@ -44,7 +45,7 @@ export default function App(props) {
           }>
           </Route>
           <Route path="/JobAdDetails/:jobAdID" element={
-            <JobAdsDetails getJobAdByID={getJobAdByID}/>
+            <JobAdsDetails getJobAdByID={getJobAdByID} globalConfig={globalConfig}/>
           }>
           </Route>
           <Route path="/*" element={
