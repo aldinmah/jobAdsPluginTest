@@ -2,16 +2,16 @@
 Configuration variable 'jobAdsPluginSettings' (example below) should be added before initialization of the plugin
 
 <pre>
-	<script>
-		const jobAdsPluginSettings = {
-			disableDynamicImagesOnJobDetails: true,
-			primaryButtonBackgroundColor: '#1976d2',
-			primaryButtonTextColor: '#ffffff',
-			companyName: 'Lorem Ipsum',
-			companyDetails: 'Lorem ipsum',
-			cssPluginWrapperClass: 'myWrapperClass'
-		}
-	</script>
+<script>
+	const jobAdsPluginSettings = {
+		disableDynamicImagesOnJobDetails: true,
+		primaryButtonBackgroundColor: '#1976d2',
+		primaryButtonTextColor: '#ffffff',
+		companyName: 'Lorem Ipsum',
+		companyDetails: 'Lorem ipsum',
+		cssPluginWrapperClass: 'myWrapperClass'
+	}
+</script>
 </pre>
 
 <strong>cssWrapperClass</strong> : string<br>
