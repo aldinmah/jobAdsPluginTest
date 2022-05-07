@@ -1,22 +1,33 @@
-# Plugin has a configuration variable (example), enable the variable by adding this code snippet before initializing the plugin
+# Plugin configuration
+Configuration variable 'jobAdsPluginSettings' (example below) should be added before initialization of the plugin
 
+<pre>
 <script>
-	const jobAdsSettings = {
-		disableDynamicImagesOnJobDetails: false
+	const jobAdsPluginSettings = {
+		disableDynamicImagesOnJobDetails: true,
+		primaryButtonBackgroundColor: '#1976d2',
+		primaryButtonTextColor: '#ffffff',
+		companyName: 'Lorem Ipsum',
+		companyDetails: 'Lorem ipsum',
+		cssPluginWrapperClass: 'myWrapperClass'
 	}
 </script>
+</pre>
 
-cssWrapperClass : string
--used to define a wrapper CSS class which could be used for custom styling of the widget
+<strong>cssWrapperClass</strong> : string<br>
+-class name used to define a wrapper CSS class which could be used for custom styling of the widget
 
-disableDynamicImagesOnJobDetails : boolean
--used to control the loading of dynamic (random) images on the job details screen / page
+<strong>primaryButtonColor</strong> : string<br>
+-hexCode used to define a primary button color which will be applied to the CTA buttons
 
-companyName : string
--used to show the company name in the job details screen / page
+<strong>disableDynamicImagesOnJobDetails</strong> : boolean<br>
+-boolean used to control the loading of dynamic (random) images on the job details screen / page
 
-companyDetails: string
--used to show the company details in the job details screen / page
+<strong>companyName</strong> : string<br>
+-company name used to show the company name in the job details screen / page
+
+<strong>companyDetails</strong> : string<br>
+-company description used to show the company details in the job details screen / page
 
 # Getting Started with Create React App
 
