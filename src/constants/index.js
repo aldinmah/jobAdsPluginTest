@@ -1,13 +1,13 @@
-export const URL_PARAMS = {
+export const APP_VIEWS = {
 	JOB_ADS_LIST: "joblist",
 	JOB_DETAILS: "jobadid"
 }
 
 export const JOB_IMAGES_LIST = [
-    'assets/images/adimages/adimage-1.jpg',
-    'assets/images/adimages/adimage-2.jpg',
-    'assets/images/adimages/adimage-3.jpg',
-    'assets/images/adimages/adimage-4.jpg',
-    'assets/images/adimages/adimage-5.jpg',
-    'assets/images/adimages/adimage-6.jpg'
+    'https://jobadsplugin.s3.amazonaws.com/adimage-1.jpg',
+    'https://jobadsplugin.s3.amazonaws.com/adimage-2.jpg',
+    'https://jobadsplugin.s3.amazonaws.com/adimage-3.jpg',
+    'https://jobadsplugin.s3.amazonaws.com/adimage-4.jpg',
+    'https://jobadsplugin.s3.amazonaws.com/adimage-5.jpg',
+    'https://jobadsplugin.s3.amazonaws.com/adimage-6.jpg'
 ]

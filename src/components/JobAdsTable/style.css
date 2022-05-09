@@ -1,13 +1,28 @@
-.jobAdsTableComponentWrapper .jobListRow{
+.jobAdsTableComponentWrapper .jobListRow {
     cursor: pointer;
 }
-.jobAdsTableComponentWrapper .jobListRow:hover{
+
+.jobAdsTableComponentWrapper .tableHeaderRow {
+    border-bottom: 2px solid #333;
+}
+
+.jobAdsTableComponentWrapper .jobListRow:hover {
     background-color: rgba(0, 0, 0, 0.04);
 }
-.jobAdsTableComponentWrapper .jobListRow:hover > td{
-    text-shadow: -0.5px 0 #000000;
+
+.jobAdsTableComponentWrapper .jobListRow:hover>td {
+    text-shadow: -0.5px 0 #333;
 }
-.jobAdsTableComponentWrapper .headerColumn{
+
+.jobAdsTableComponentWrapper .headerColumn {
     font-size: 1rem;
     font-weight: 600;
+}
+
+.jobAdsTableComponentWrapper .tableLayoutControl>span {
+    font-size: 14px;
+}
+
+.jobAdsTableComponentWrapper .tablePaginationWrapper {
+    float: right;
 }

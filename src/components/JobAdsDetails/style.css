@@ -1,44 +1,65 @@
-.jobAdsDetailsWrapper{
+.jobAdsDetailsWrapper {
     color: #666;
 }
-.jobAdsDetailsWrapper .fullRow{
+
+.jobAdsDetailsWrapper .fullRow {
     width: 100%;
     float: left;
 }
+
+.jobAdsDetailsWrapper .personInfoRow {
+    margin: 3px 0
+}
+
+.jobAdsDetailsWrapper .randomImageWrapper {
+    margin: 10px 0;
+}
+
+.jobAdsDetailsWrapper .randomImageWrapper img {
+    width: 100%;
+}
+
 .jobAdsDetailsWrapper h1,
-.jobAdsDetailsWrapper .jobTitle{
+.jobAdsDetailsWrapper .jobTitle {
     font-size: 2em;
     font-weight: bold;
     margin-top: 0.67em;
     margin-bottom: 0.67em;
 }
+
 .jobAdsDetailsWrapper h2,
-.jobAdsDetailsWrapper .descriptionTitle{
+.jobAdsDetailsWrapper .descriptionTitle {
     font-size: 1.5em;
     font-weight: bold;
     margin-top: 0.83em;
     margin-bottom: 0.41em;
 }
-.jobAdsDetailsWrapper .locationBox{
+
+.jobAdsDetailsWrapper .locationBox {
     margin-right: 20px;
 }
+
 .jobAdsDetailsWrapper .locationValue,
-.jobAdsDetailsWrapper .durationValue{
+.jobAdsDetailsWrapper .durationValue {
     display: inline-block;
     margin-left: 10px;
     position: relative;
     top: -5px;
 }
-.jobAdsDetailsWrapper .applyBtnWrapper{
+
+.jobAdsDetailsWrapper .applyBtnWrapper {
     margin: 20px 0 5px 0;
 }
-.jobAdsDetailsWrapper .applyBtnWrapper .applyBtn{
+
+.jobAdsDetailsWrapper .applyBtnWrapper .applyBtn {
     margin-right: 50px;
 }
-.jobAdsDetailsWrapper .contactPersonInfo{
+
+.jobAdsDetailsWrapper .contactPersonInfo {
     margin-bottom: 20px;
 }
-.jobAdsDetailsWrapper .social-icon{
+
+.jobAdsDetailsWrapper .social-icon {
     width: 40px;
     height: 40px;
     -webkit-border-radius: 50%;
@@ -60,30 +81,48 @@
     border: 2px solid transparent;
     transition: all .1s ease;
 }
-.jobAdsDetailsWrapper .social-icon > svg{
+
+.jobAdsDetailsWrapper .social-icon>svg {
     transition: none;
 }
-.jobAdsDetailsWrapper .twitter-icon{
+
+.jobAdsDetailsWrapper .twitter-icon {
     background-color: #27A0DD;
 }
-.jobAdsDetailsWrapper .twitter-icon:hover{
+
+.jobAdsDetailsWrapper .twitter-icon:hover {
     background-color: #fff;
     border-color: #27A0DD;
     fill: #27A0DD;
 }
-.jobAdsDetailsWrapper .facebook-icon{
+
+.jobAdsDetailsWrapper .facebook-icon {
     background-color: #335290;
 }
-.jobAdsDetailsWrapper .facebook-icon:hover{
+
+.jobAdsDetailsWrapper .facebook-icon:hover {
     background-color: #fff;
     border-color: #335290;
     fill: #335290;
 }
-.jobAdsDetailsWrapper .linkedin-icon{
+
+.jobAdsDetailsWrapper .linkedin-icon {
     background-color: #2164A9;
 }
-.jobAdsDetailsWrapper .linkedin-icon:hover{
+
+.jobAdsDetailsWrapper .linkedin-icon:hover {
     background-color: #fff;
     border-color: #2164A9;
     fill: #2164A9;
+}
+
+.jobAdsDetailsWrapper .navBackBtn svg {
+    position: relative;
+    left: -4px;
+    top: -0.5px;
+}
+
+.jobAdsDetailsWrapper .applyBtnWrapper .applyBtn:hover {
+    opacity: 0.95;
+    transition: all .3s ease;
 }

@@ -1,4 +1,5 @@
-let appBaseUrlEl = 'https://staging.leanlink.io/public/api/'
+//let appBaseUrlEl = 'https://staging.leanlink.io/public/api/'
+let appBaseUrlEl = 'http://127.0.0.1:8000/public/api/'
 let tokenEl = '008f4ac7-787c-4050-83f2-17466bbd520b'
 
 function handleResponse(response) {

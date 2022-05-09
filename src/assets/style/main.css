@@ -1,15 +1,69 @@
 .job-ads-container * {
-    transition: all .2s ease;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
 }
-.job-ads-container{
-    font-family: inherit;
+
+.job-ads-container {
+  font-family: inherit;
 }
-.job-ads-container .jobAdsTable{
-    min-width: 100px;
+
+.job-ads-container a {
+  text-decoration: none;
+  color: #1976d2;
+  position: relative;
 }
-.floatLeft{
-    float: left;
+
+.job-ads-container a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: currentColor;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+  transform: scale(0);
+  transform-origin: center;
 }
-.w100{
-    width: 100%;
+
+.job-ads-container a {
+  overflow: hidden;
+}
+
+.job-ads-container a:hover::after,
+.job-ads-container a:focus::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.job-ads-container .jobAdsTable {
+  min-width: 100px;
+}
+
+.job-ads-container .floatLeft {
+  float: left;
+}
+
+.job-ads-container .floatRight {
+  float: right;
+}
+
+.job-ads-container .w100 {
+  width: 100%;
+}
+
+.job-ads-container .textCenter {
+  text-align: center;
+}
+
+.job-ads-container button:hover {
+  opacity: 0.95;
+  transition: all 0.3s ease;
+}
+
+.job-ads-container button:disabled {
+  background-color: #ccc !important;
+  cursor: not-allowed !important;
+  color: rgba(0, 0, 0, 0.26) !important;
 }

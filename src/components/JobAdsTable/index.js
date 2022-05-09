@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-
-import Box from "@mui/material/Box";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TablePagination from "@mui/material/TablePagination";
-import TableRow from "@mui/material/TableRow";
-import TableSortLabel from "@mui/material/TableSortLabel";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Switch from "@mui/material/Switch";
+import { 
+  Box,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TablePagination,
+  TableRow,
+  TableSortLabel,
+  FormControlLabel,
+  Switch
+} from "@mui/material";
 import { visuallyHidden } from "@mui/utils";
-import { URL_PARAMS } from "../../constants";
+import { APP_VIEWS } from "../../constants";
 
 import './style.css'
 
@@ -45,7 +45,7 @@ function EnhancedTableHead(props) {
 
   return (
     <TableHead>
-      <TableRow>
+      <TableRow className="tableHeaderRow">
         {headCells.map((headCell, index) => (
           <TableCell
             key={headCell.id}
@@ -79,8 +79,7 @@ export default function JobAdsListTable(props) {
   const [orderBy, setOrderBy] = useState("calories");
   const [page, setPage] = useState(0);
   const [compactView, setCompactView] = useState(false);
-  const [rowsPerPage, setRowsPerPage] = useState(5);
-  let navigate = useNavigate();
+  const [rowsPerPage, setRowsPerPage] = useState(10);
 
   useEffect(() => {
     if (!props.jobAdsList) prepareTableData([]);
@@ -152,14 +151,11 @@ export default function JobAdsListTable(props) {
     setCompactView(event.target.checked);
   };
 
-  const handleRowClick = (data) => {
-    const parser = new URL(window.location);
-    parser.searchParams.set(URL_PARAMS.JOB_DETAILS, data.id);
-    console.log(parser.href);
-    //window.location = parser.href;
-    //navigate(URL_PARAMS.JOB_DETAILS+"/"+);
+  const handleRowClick = (jobAd) => {
+    props.handleJobAdSelection(jobAd);
+    props.handleUserNavigation(APP_VIEWS.JOB_DETAILS, jobAd.id);
   }
-
+  
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - tableData.length) : 0;
 
@@ -220,10 +216,12 @@ export default function JobAdsListTable(props) {
         page={page}
         onPageChange={handleChangePage}
         onRowsPerPageChange={handleChangeRowsPerPage}
+        className="tablePaginationWrapper"
       />
       <FormControlLabel
         control={<Switch checked={compactView} onChange={handleChangeCompactView} />}
-        label="Compact view"
+        label="Compact table layout"
+        className="tableLayoutControl"
       />
     </Box>
   );

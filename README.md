@@ -7,9 +7,16 @@ Configuration variable 'jobAdsPluginSettings' (example below) should be added be
 		disableDynamicImagesOnJobDetails: true,
 		primaryButtonBackgroundColor: '#1976d2',
 		primaryButtonTextColor: '#ffffff',
+		secondaryButtonBackgroundColor: '#ffffff',
+		secondaryButtonTextColor: '#1976d2',
+		linkElementTextColor:'#1a7e30',
 		companyName: 'Lorem Ipsum',
 		companyDetails: 'Lorem ipsum',
-		cssPluginWrapperClass: 'myWrapperClass'
+		companyPrivacyPolicyURL: 'https://www.google.com/search?q=privacy+policy',
+		companyTermsAndConditionsURL: 'https://www.google.com/search?q=terms+and+conditions',
+		cssPluginWrapperClass: 'myWrapperClass',
+		customApplyFormURL: '',
+		useInternalApplyForm: true,
 	}
 </script>
 </pre>
@@ -17,8 +24,20 @@ Configuration variable 'jobAdsPluginSettings' (example below) should be added be
 <strong>cssWrapperClass</strong> : string<br>
 -class name used to define a wrapper CSS class which could be used for custom styling of the widget
 
-<strong>primaryButtonColor</strong> : string<br>
--hexCode used to define a primary button color which will be applied to the CTA buttons
+<strong>primaryButtonBackgroundColor</strong> : string<br>
+-hexCode used to define a primary button background color
+
+<strong>primaryButtonTextColor</strong> : string<br>
+-hexCode used to define a primary button text color
+
+<strong>secondaryButtonBackgroundColor</strong> : string<br>
+-hexCode used to define a secondary button background color
+
+<strong>secondaryButtonTextColor</strong> : string<br>
+-hexCode used to define a secondary button text color
+
+<strong>linkElementTextColor</strong> : string<br>
+-hexCode used to define a text color for anchor tags (links)
 
 <strong>disableDynamicImagesOnJobDetails</strong> : boolean<br>
 -boolean used to control the loading of dynamic (random) images on the job details screen / page
@@ -28,6 +47,15 @@ Configuration variable 'jobAdsPluginSettings' (example below) should be added be
 
 <strong>companyDetails</strong> : string<br>
 -company description used to show the company details in the job details screen / page
+
+<strong>companyPrivacyPolicyURL</strong> : string<br>
+-company Privacy Policy URL which is used for job application form
+
+<strong>companyTermsAndConditionsURL</strong> : string<br>
+-company Terms & Conditions URL which is used for job application form
+
+<strong>customApplyFormURL</strong> : string<br>
+-parameter which can be used to define custom apply for job URL (external form)
 
 # Getting Started with Create React App
 
