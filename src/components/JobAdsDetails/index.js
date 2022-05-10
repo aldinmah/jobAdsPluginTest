@@ -82,7 +82,10 @@ export default function JobAdsDetails(props) {
             className="floatLeft applyBtn"
             style={props.customConfigStyling.getPrimaryButtonStyling()}
             onClick={() => {
-              if(props.globalConfig?.customApplyFormURL){
+              if(props.globalConfig?.useInternalApplyForm){
+                setShowApplyToJobForm(true)
+              }
+              else if(props.globalConfig?.customApplyFormURL){
                 window.open(props.globalConfig.customApplyFormURL, "_blank")
               }
               else if(jobAdDetailsData?.applyUrl){

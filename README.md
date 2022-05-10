@@ -57,6 +57,10 @@ Configuration variable 'jobAdsPluginSettings' (example below) should be added be
 <strong>customApplyFormURL</strong> : string<br>
 -parameter which can be used to define custom apply for job URL (external form)
 
+<strong>useInternalApplyForm</strong> : boolean<br>
+-if this parameter is set to true, a internal plugin form will be used for job application regardless of other settings like 'customApplyFormURL' or the form URL provided by the LeanLink API
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

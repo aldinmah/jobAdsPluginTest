@@ -10,11 +10,16 @@
     width: 100%;
 }
 
+.applyForJobFormWrapper .inputField input {
+    min-height: 50px;
+}
+
 .applyForJobFormWrapper .inputField .MuiFormHelperText-root {
     position: absolute;
-    bottom: 3px;
+    bottom: 0px;
     right: -5px;
     font-style: italic;
+    font-size: 0.65rem;
 }
 
 .applyForJobFormWrapper .submitJobBtnWrapper {
