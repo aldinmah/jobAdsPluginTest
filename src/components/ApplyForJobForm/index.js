@@ -33,7 +33,7 @@ export default function ApplyForJobForm(props) {
 
   useEffect(() => {
     setjobAdDetailsData(props.jobAdDetailsData);
-    if(props.globalConfig?.companyTermsAndConditionsURL && props.globalConfig?.companyPrivacyPolicyURL)
+    if(props.globalConfig?.companyTermsAndConditionsURL || props.globalConfig?.companyPrivacyPolicyURL)
       setIsTocPrivacyAdded(true)
     else
       setIsTocPrivacyAdded(false)
@@ -260,7 +260,6 @@ export default function ApplyForJobForm(props) {
               required
               error={companyTocPrivacyValidationFailed}
             >
-              
             <FormControlLabel
               control={
                 <Checkbox 

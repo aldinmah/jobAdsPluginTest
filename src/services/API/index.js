@@ -1,11 +1,14 @@
 //let appBaseUrlEl = 'https://staging.leanlink.io/public/api/'
-let appBaseUrlEl = 'http://127.0.0.1:8000/public/api/'
-let tokenEl = '008f4ac7-787c-4050-83f2-17466bbd520b'
+let apiBaseUrl = 'http://127.0.0.1:8000/public/api/'
+let localApiBaseUrl = 'http://127.0.0.1:8000/public/api/'
+let stagingApiBaseUrl = 'https://staging.leanlink.io/public/api/'
+let prodApiBaseUrl = 'https://app.leanlink.io/public/api/api/'
+
+let token = '008f4ac7-787c-4050-83f2-17466bbd520b'
 
 function handleResponse(response) {
     return response.text().then((text) => {
         const data = text && JSON.parse(text);
-
         if (!response.ok) {
             const error = (data && data.message) || response.statusText;
             return Promise.reject(error);
@@ -16,58 +19,58 @@ function handleResponse(response) {
 }
 
 const handle = (promise) => promise
-    .then(data => ([data, undefined]))
-    .catch(error => Promise.resolve([undefined, error]));
+    .then(data => (data))
+    .catch(error => Promise.resolve(error));
 
-function get(url, options = {}) {
+function get(endpoint, options = {}) {
     const requestOptions = {
         method: 'GET',
         headers: {
             'Access-Control-Allow-Origin' : '*',
             'Content-Type': 'application/json',
-            'X-Auth-Token': tokenEl,
+            'X-Auth-Token': token,
         },
         ...options,
     };
-    return handle(fetch(url, requestOptions).then(handleResponse));
+    return handle(fetch(apiBaseUrl+endpoint, requestOptions).then(handleResponse));
 }
 
-function post(url, body, options = {}) {
+function post(endpoint, body, options = {}) {
     const requestOptions = {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'X-Auth-Token': tokenEl
+            'X-Auth-Token': token
         },
         body: JSON.stringify(body),
         ...options,
     };
-    return handle(fetch(url, requestOptions).then(handleResponse));
+    return handle(fetch(apiBaseUrl+endpoint, requestOptions).then(handleResponse));
 }
 
-function put(url, body, options = {}) {
+function put(endpoint, body, options = {}) {
     const requestOptions = {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
-            'X-Auth-Token': tokenEl
+            'X-Auth-Token': token
         },
         body: JSON.stringify(body),
         ...options,
     };
-    return handle(fetch(url, requestOptions).then(handleResponse));
+    return handle(fetch(apiBaseUrl+endpoint, requestOptions).then(handleResponse));
 }
 
-function del(url, options = {}) {
+function del(endpoint, options = {}) {
     const requestOptions = {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
-            'X-Auth-Token': tokenEl
+            'X-Auth-Token': token
         },
         ...options,
     };
-    return handle(fetch(url, requestOptions).then(handleResponse));
+    return handle(fetch(apiBaseUrl+endpoint, requestOptions).then(handleResponse));
 }
 
 const getFromStorage = (storageKey, isSessionStorage) => {

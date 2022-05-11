@@ -1,0 +1,11 @@
+.selectBoxWrapper {
+    float: left;
+    width: auto;
+    margin-right: 20px;
+}
+
+.selectBoxWrapper .controlWrapper,
+.selectBoxWrapper .dropdown {
+    min-width: 200px;
+    height: 45px;
+}

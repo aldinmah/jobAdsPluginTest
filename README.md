@@ -5,13 +5,13 @@ Configuration variable 'jobAdsPluginSettings' (example below) should be added be
 <script>
 	const jobAdsPluginSettings = {
 		disableDynamicImagesOnJobDetails: true,
-		primaryButtonBackgroundColor: '#1976d2',
+		primaryButtonBackgroundColor: '#1a7e30',
 		primaryButtonTextColor: '#ffffff',
 		secondaryButtonBackgroundColor: '#ffffff',
-		secondaryButtonTextColor: '#1976d2',
+		secondaryButtonTextColor: '#1a7e30',
 		linkElementTextColor:'#1a7e30',
-		companyName: 'Lorem Ipsum',
-		companyDetails: 'Lorem ipsum',
+		companyName: 'Company Name example',
+		companyDetails: 'Company Description lorem ipsum...',
 		companyPrivacyPolicyURL: 'https://www.google.com/search?q=privacy+policy',
 		companyTermsAndConditionsURL: 'https://www.google.com/search?q=terms+and+conditions',
 		cssPluginWrapperClass: 'myWrapperClass',

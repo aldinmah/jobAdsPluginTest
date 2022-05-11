@@ -67,3 +67,8 @@
   cursor: not-allowed !important;
   color: rgba(0, 0, 0, 0.26) !important;
 }
+
+.dropdownControlsWrapper {
+  width: 100%;
+  float: left;
+}
