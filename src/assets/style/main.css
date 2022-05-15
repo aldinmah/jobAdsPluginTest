@@ -68,7 +68,10 @@
   color: rgba(0, 0, 0, 0.26) !important;
 }
 
-.dropdownControlsWrapper {
+.job-ads-container .dropdownControlsWrapper {
   width: 100%;
   float: left;
+}
+.job-ads-container .btnClearFilters{
+  min-height: 45px;
 }

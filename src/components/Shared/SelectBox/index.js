@@ -5,14 +5,19 @@ import "./style.css";
 
 export default function SelectBox(props) {
   const [dropdownOptions, setDropdownOptions] = useState(props.options);
-  const [selectedValue, setSelectedValue] = useState({});
+  const [selectedValue, setSelectedValue] = useState(props.value ? props.value : 0);
 
   useEffect(() => {
     setDropdownOptions(props.options);
   }, [props.options]);
 
+  useEffect(() => {
+    setSelectedValue(props.value)
+  }, [props.value]);
+
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
+    props.handleDropdownChange(props.type, event.target.value)
   };
 
   return (
