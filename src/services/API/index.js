@@ -1,5 +1,5 @@
 //let appBaseUrlEl = 'https://staging.leanlink.io/public/api/'
-let apiBaseUrl = 'http://127.0.0.1:8000/public/api/'
+let apiBaseUrl = 'https://staging.leanlink.io/public/api/'
 let localApiBaseUrl = 'http://127.0.0.1:8000/public/api/'
 let stagingApiBaseUrl = 'https://staging.leanlink.io/public/api/'
 let prodApiBaseUrl = 'https://app.leanlink.io/public/api/api/'
