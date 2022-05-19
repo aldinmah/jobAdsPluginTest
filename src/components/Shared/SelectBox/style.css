@@ -6,6 +6,6 @@
 
 .selectBoxWrapper .controlWrapper,
 .selectBoxWrapper .dropdown {
-    min-width: 200px;
+    min-width: 150px;
     height: 45px;
 }

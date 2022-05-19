@@ -12,6 +12,7 @@
 
 .applyForJobFormWrapper .inputField input {
     min-height: 50px;
+    box-sizing: border-box;
 }
 
 .applyForJobFormWrapper .inputField .MuiFormHelperText-root {
