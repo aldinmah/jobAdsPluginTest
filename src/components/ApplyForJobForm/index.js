@@ -12,6 +12,8 @@ import {
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneIphoneOutlinedIcon from "@mui/icons-material/PhoneIphoneOutlined";
+import API from "../../services/API";
+import { RESOURCES } from "../../services/API/endpoints";
 
 import "./style.css";
 
@@ -96,12 +98,34 @@ export default function ApplyForJobForm(props) {
 
   const submitJobApplicationHandler = () => {
     if (isFormValid()) {
-      console.log("submit form");
+      //submitJobApplication(RESOURCES);
+      let gdprAcceptedDate = new Date();
+      let dd = String(gdprAcceptedDate.getDate()).padStart(2, '0');
+      let mm = String(gdprAcceptedDate.getMonth() + 1).padStart(2, '0'); //January is 0!
+      let yyyy = gdprAcceptedDate.getFullYear();
+      
+      gdprAcceptedDate = yyyy + "-" + mm + '-' + dd ;
+      let applicationData = {
+        'firstName' : firstName,
+        'lastName' : lastName,
+        'prospect' : true,
+        'primaryEmail' : email,
+        'phone1' : phone,
+        'services' : [jobAdDetailsData.service.id],
+        'information' : 'Sökt från ' + jobAdDetailsData.id,
+        'recruitmentAd' : jobAdDetailsData.id,
+        'gdprAcceptedAt' : gdprAcceptedDate,
+      }
+      API.post(RESOURCES, applicationData).then(function (result) {
+        console.log(result);
+
+      });
     }
   };
 
   return (
     <Box component="form" className="fullRow applyForJobFormWrapper">
+
       {jobAdDetailsData?.title &&
         <div className="fullRow formTitleWrapper">
           <h2>{jobAdDetailsData.title}</h2>
