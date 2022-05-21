@@ -270,6 +270,7 @@ export default function JobAdsDetails(props) {
           setShowApplyToJobForm={setShowApplyToJobForm}
           jobAdDetailsData={jobAdDetailsData}
           customConfigStyling={props.customConfigStyling}
+          handleUserNavigation={props.handleUserNavigation}
         />
       </Collapse>
     </Box>

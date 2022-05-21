@@ -1,16 +1,16 @@
-//let appBaseUrlEl = 'https://staging.leanlink.io/public/api/'
-let apiBaseUrl = 'https://staging.leanlink.io/public/api/'
+let apiBaseUrl = process.env.REACT_APP_API_BASE_URL || 'https://app.leanlink.io/public/api/api/'
+
 let localApiBaseUrl = 'http://127.0.0.1:8000/public/api/'
 let stagingApiBaseUrl = 'https://staging.leanlink.io/public/api/'
 let prodApiBaseUrl = 'https://app.leanlink.io/public/api/api/'
 
-let token = '008f4ac7-787c-4050-83f2-17466bbd520b'
+let token = process.env.REACT_APP_API_TOKEN || '008f4ac7-787c-4050-83f2-17466bbd520b'
 
 function handleResponse(response) {
     return response.text().then((text) => {
         const data = text && JSON.parse(text);
         if (!response.ok) {
-            const error = (data && data.message) || response.statusText;
+            const error = (data) || response.statusText;
             return Promise.reject(error);
         }
 

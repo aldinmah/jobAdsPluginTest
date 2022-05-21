@@ -7,13 +7,15 @@ import {
   Checkbox,
   FormControlLabel,
   FormHelperText,
-  FormControl
+  FormControl,
+  Alert
 } from "@mui/material";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneIphoneOutlinedIcon from "@mui/icons-material/PhoneIphoneOutlined";
 import API from "../../services/API";
 import { RESOURCES } from "../../services/API/endpoints";
+import { APP_VIEWS } from "../../constants"
 
 import "./style.css";
 
@@ -31,7 +33,7 @@ export default function ApplyForJobForm(props) {
   const [isTocPrivacyAdded, setIsTocPrivacyAdded] = useState(false);
   const [companyTocPrivacyAccepted, setCompanyTocPrivacyAccepted] = useState(false);
   const [companyTocPrivacyValidationFailed, setCompanyTocPrivacyValidationFailed] = useState(false);
-  
+  const [notificationMsg, setNotificationMsg] = useState({ type:'', message:'' })
 
   useEffect(() => {
     setjobAdDetailsData(props.jobAdDetailsData);
@@ -78,7 +80,11 @@ export default function ApplyForJobForm(props) {
     if (phone === "") {
       setPhoneValidationFailed(true);
       isValid = false;
-    } else setPhoneValidationFailed(false);
+    } else {
+      var phoneRegex = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
+      let phoneValidationFailed = phoneRegex.test(phone);
+      setPhoneValidationFailed(phoneValidationFailed? false : true);
+    }
 
     return isValid;
   };
@@ -96,8 +102,13 @@ export default function ApplyForJobForm(props) {
     return false;
   };
 
+  const resetNotificationMsg = () => {
+    setNotificationMsg({ type:'', message:'' })
+  }
+
   const submitJobApplicationHandler = () => {
     if (isFormValid()) {
+      setNotificationMsg(false)
       //submitJobApplication(RESOURCES);
       let gdprAcceptedDate = new Date();
       let dd = String(gdprAcceptedDate.getDate()).padStart(2, '0');
@@ -117,15 +128,61 @@ export default function ApplyForJobForm(props) {
         'gdprAcceptedAt' : gdprAcceptedDate,
       }
       API.post(RESOURCES, applicationData).then(function (result) {
-        console.log(result);
+        let isSubmitted = false;
 
+        if(result && result.errors){
+          result.errors.forEach(errMsg => {
+            setNotificationMsg({
+              type: 'error',
+              message: errMsg
+            })
+          });
+        }
+        else{
+          isSubmitted = true;
+          setNotificationMsg({
+            type: 'success',
+            message: 'Ansökan har skickats'
+          })
+        }
+
+        setTimeout(function(){
+          resetNotificationMsg();
+          if(isSubmitted)
+            props.handleUserNavigation(APP_VIEWS.JOB_ADS_LIST)
+        },5000)
+      }).catch(function(errors) {
+        //here when you reject the promise
+        if(errors)
+          errors.forEach(errMsg => {
+            setNotificationMsg({
+              type: 'error',
+              message: errMsg
+            })
+          });
+        else{
+          setNotificationMsg({
+            type: 'error',
+            message: 'Något gick fel, vänligen försök igen senare'
+          })
+        }
+        setTimeout(resetNotificationMsg,5000)
       });
+    }
+    else{
+      setNotificationMsg({
+        type: 'error',
+        message: 'Formulärdata är inte giltiga'
+      })
+      setTimeout(resetNotificationMsg,5000)
     }
   };
 
   return (
     <Box component="form" className="fullRow applyForJobFormWrapper">
-
+      {notificationMsg && notificationMsg.type &&
+        <Alert severity={notificationMsg.type}>{notificationMsg.message}</Alert>
+      }
       {jobAdDetailsData?.title &&
         <div className="fullRow formTitleWrapper">
           <h2>{jobAdDetailsData.title}</h2>
@@ -264,7 +321,9 @@ export default function ApplyForJobForm(props) {
           helperText={phoneValidationFailed ? "Phone is required" : undefined}
           onChange={(event) => {
             setPhone(event.target.value);
-            setPhoneValidationFailed(event.target.value === "" ? true : false);
+            var phoneRegex = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
+            let phoneValidationFailed = phoneRegex.test(event.target.value);
+            setPhoneValidationFailed(phoneValidationFailed? false : true);
           }}
           onBlur={(event) => {
             let newValue = event.target.value;
@@ -273,7 +332,9 @@ export default function ApplyForJobForm(props) {
             }
 
             setPhone(newValue);
-            setPhoneValidationFailed(newValue === "" ? true : false);
+            var phoneRegex = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
+            let phoneValidationFailed = phoneRegex.test(event.target.value);
+            setPhoneValidationFailed(phoneValidationFailed? false : true);
           }}
           error={phoneValidationFailed}
         />
