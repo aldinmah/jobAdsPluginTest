@@ -1,9 +1,4 @@
 let apiBaseUrl = process.env.REACT_APP_API_BASE_URL || 'https://app.leanlink.io/public/api/api/'
-
-let localApiBaseUrl = 'http://127.0.0.1:8000/public/api/'
-let stagingApiBaseUrl = 'https://staging.leanlink.io/public/api/'
-let prodApiBaseUrl = 'https://app.leanlink.io/public/api/api/'
-
 let token = process.env.REACT_APP_API_TOKEN || '008f4ac7-787c-4050-83f2-17466bbd520b'
 
 function handleResponse(response) {
