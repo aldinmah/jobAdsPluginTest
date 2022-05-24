@@ -22,7 +22,8 @@ function get(endpoint, options = {}) {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'X-Auth-Token': token
+            'X-Auth-Token': token,
+            'mode': 'no-cors'
         },
         ...options,
     };
