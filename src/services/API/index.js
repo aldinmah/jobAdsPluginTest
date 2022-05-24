@@ -23,6 +23,7 @@ function get(endpoint, options = {}) {
         headers: {
             'Content-Type': 'application/json',
             'X-Auth-Token': token,
+            'Referer': 'no-referrer'
         },
         ...options,
     };
