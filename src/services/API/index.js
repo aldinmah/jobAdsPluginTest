@@ -20,6 +20,10 @@ const handle = (promise) => promise
 function get(endpoint, options = {}) {
     const requestOptions = {
         method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-Auth-Token': token
+        },
         ...options,
     };
     return handle(fetch(apiBaseUrl+endpoint, requestOptions).then(handleResponse));
