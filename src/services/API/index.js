@@ -24,7 +24,6 @@ function get(endpoint, options = {}) {
             'Access-Control-Allow-Origin':'*',
             'Content-Type': 'text/plain',
             'X-Auth-Token': token,
-            'mode': 'no-cors'
         },
         ...options,
     };
