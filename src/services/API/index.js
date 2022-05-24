@@ -21,7 +21,7 @@ function get(endpoint, options = {}) {
     const requestOptions = {
         method: 'GET',
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'text/plain',
             'X-Auth-Token': token
         },
         ...options,
