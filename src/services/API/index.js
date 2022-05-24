@@ -21,7 +21,7 @@ function get(endpoint, options = {}) {
     const requestOptions = {
         method: 'GET',
         headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
+            'Content-Type': 'application/json',
             'X-Auth-Token': token
         },
         ...options,
@@ -33,7 +33,7 @@ function post(endpoint, body, options = {}) {
     const requestOptions = {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
+            'Content-Type': 'application/json',
             'X-Auth-Token': token
         },
         body: JSON.stringify(body),
