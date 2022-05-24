@@ -8,7 +8,8 @@ import {
   FormControlLabel,
   FormHelperText,
   FormControl,
-  Alert
+  Alert,
+  AlertTitle
 } from "@mui/material";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
@@ -181,7 +182,10 @@ export default function ApplyForJobForm(props) {
   return (
     <Box component="form" className="fullRow applyForJobFormWrapper">
       {notificationMsg && notificationMsg.type &&
-        <Alert severity={notificationMsg.type}>{notificationMsg.message}</Alert>
+        <Alert severity={notificationMsg.type}>
+           <AlertTitle className="alertTitle">{notificationMsg.type}</AlertTitle>
+          {notificationMsg.message}
+        </Alert>
       }
       {jobAdDetailsData?.title &&
         <div className="fullRow formTitleWrapper">
