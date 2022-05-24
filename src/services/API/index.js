@@ -22,7 +22,6 @@ function get(endpoint, options = {}) {
         method: 'GET',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
-            'X-Auth-Token': token
         },
         ...options,
     };
