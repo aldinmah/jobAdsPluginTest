@@ -21,8 +21,7 @@ function get(endpoint, options = {}) {
     const requestOptions = {
         method: 'GET',
         headers: {
-            'Access-Control-Allow-Origin':'*',
-            'Content-Type': 'text/plain',
+            'Content-Type': 'application/json',
             'X-Auth-Token': token,
         },
         ...options,
