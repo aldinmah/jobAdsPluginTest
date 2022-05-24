@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { Box, Collapse, Button, TextField } from "@mui/material"
+import { Box, Collapse, Button } from "@mui/material"
 import ApplyForJobForm from '../ApplyForJobForm'
 import { JOB_IMAGES_LIST, APP_VIEWS } from "../../constants"
 
