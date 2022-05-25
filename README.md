@@ -83,6 +83,10 @@ The variable must be added before plugin initialization in order to setup custom
 
 # Development 
 
+## Setup local environment for development
+Step 1: Pull the github code
+Step 2: Navigate to project root folder and run `npm install`
+
 ## Available Scripts
 
 In the project directory, you can run:
