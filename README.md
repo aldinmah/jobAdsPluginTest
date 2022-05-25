@@ -13,8 +13,8 @@ Link plugin javascript and css files to your page
 Example: 
 
 ```html
-<link href="https://cdn.jsdelivr.net/gh/aldinmah/jobAdsPluginTest@main/build/static/css/main.f4427ac7.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/gh/aldinmah/jobAdsPluginTest@main/build/static/js/main.c5ab0e1a.js"></script>
+<link href="https://jobadsplugin.s3.amazonaws.com/JobAdsWidget-LeanLink.css" rel="stylesheet" />
+<script src="https://jobadsplugin.s3.amazonaws.com/JobAdsWidget-LeanLink.js"></script>
 ```
 
 ### Step 3 (Optional): Custom plugin configuration
