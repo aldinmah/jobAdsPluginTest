@@ -1,23 +1,21 @@
 # Plugin usage and configuration
 
 ### Step 1: Adding a HTML container for the plugin<br>
-Create a HTML div element with  with CSS class "job-ads-container" in the page you want the plugin to be shown 
+Create a HTML div element with with CSS class "job-ads-container" in the page you want the plugin to be shown 
 Example:
-<pre>
-<script>
-	<div class="job-ads-container"></div>
-</script>
-</pre>
+
+```html
+<div class="job-ads-container"></div>
+```
 
 ### Step 2: Adding plugin js/css files<br>
 Link plugin javascript and css files to your page
 Example: 
-<pre>
-<script>
-	<link href="https://cdn.jsdelivr.net/gh/aldinmah/jobAdsPluginTest@main/build/static/css/main.f4427ac7.css" rel="stylesheet" />
-	<script src="https://cdn.jsdelivr.net/gh/aldinmah/jobAdsPluginTest@main/build/static/js/main.c5ab0e1a.js"></script>
-</script>
-</pre>
+
+```html
+<link href="https://cdn.jsdelivr.net/gh/aldinmah/jobAdsPluginTest@main/build/static/css/main.f4427ac7.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/gh/aldinmah/jobAdsPluginTest@main/build/static/js/main.c5ab0e1a.js"></script>
+```
 
 ### Step 3 (Optional): Custom plugin configuration
 Different parts of plugin can be configured by using the configuration variable 'jobAdsPluginSettings' (example below).<br>
