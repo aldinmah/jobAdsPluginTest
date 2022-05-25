@@ -74,4 +74,5 @@
 }
 .job-ads-container .btnClearFilters{
   min-height: 45px;
+  float: right;
 }
