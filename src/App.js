@@ -117,7 +117,7 @@ export default function App(props) {
         allChildItemsFromService = getAllProfessionsForService(selectedParentService, true)        
       }
       jobAdsListAll.forEach(item => {
-        if(item.service.id == jobAdsDataFilter.service || allChildItemsFromService.includes(item.service.id))
+        if(item.service.id === jobAdsDataFilter.service || allChildItemsFromService.includes(item.service.id))
           filteredData.push(item)
       })      
       setTimeout(function () {
@@ -126,13 +126,13 @@ export default function App(props) {
     }
 
     if(jobAdsDataFilter.service > 0 && jobAdsDataFilter.profession > 0){
-      filteredData = filteredData.filter(item => item.service.id == jobAdsDataFilter.profession);
+      filteredData = filteredData.filter(item => item.service.id === jobAdsDataFilter.profession);
       setTimeout(function () {
         handleDropdownChange('profession', jobAdsDataFilter.profession)
       },0)
     }
     else if(jobAdsDataFilter.profession > 0){
-      filteredData = jobAdsListAll.filter(item => item.service.id == jobAdsDataFilter.profession);
+      filteredData = jobAdsListAll.filter(item => item.service.id === jobAdsDataFilter.profession);
     }
     if(!jobAdsDataFilter.service && !jobAdsDataFilter.profession){
       filteredData = [...jobAdsListAll]
@@ -146,7 +146,7 @@ export default function App(props) {
       if(!allGroupedCounties.length)
         allGroupedCounties = updateGroupedLocations()
 
-      let selectedCounty = allGroupedCounties.find(item => item.id == jobAdsDataFilter.location)
+      let selectedCounty = allGroupedCounties.find(item => item.id === jobAdsDataFilter.location)
       if(selectedCounty){
         filteredData = filteredData.filter(item => selectedCounty.locationIDs.includes(item.municipality.id));
       }  
@@ -213,7 +213,7 @@ export default function App(props) {
     else
     {
         for(var prop in service) {
-            if(prop == 'children') {
+            if(prop === 'children') {
                 if(service[prop].length) {
                    allProfessions = allProfessions.concat(service[prop]);
                 }
@@ -270,7 +270,7 @@ export default function App(props) {
   const getServiceByID = (id) => {
     let selectedService = {}
     servicesListFromAPI.forEach(item => {
-      if(item.id == id) selectedService = item
+      if(item.id === id) selectedService = item
     })
     return selectedService
   }
@@ -334,12 +334,14 @@ export default function App(props) {
   useEffect(() => {
     getAllDataFromAPICall(RECRUITMENT_ADS);
     getAllDataFromAPICall(SERVICES);
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
     if(jobAdsUsedServicesIDs.length){
       filterDropdownsBasedOnJobAds()
     }
+    // eslint-disable-next-line
   }, [jobAdsUsedServicesIDs]);
 
   useEffect(() => {
@@ -347,6 +349,7 @@ export default function App(props) {
       prepareProfessionsFromServices(servicesListFromAPI)
       setProfessionListFromAPI(allProfessions)
     }
+    // eslint-disable-next-line
   }, [servicesListFromAPI]);
 
   const updateGroupedLocations = () => {
@@ -401,6 +404,7 @@ export default function App(props) {
 
   useEffect(() => {
     filterJobAdsTable()
+    // eslint-disable-next-line
   }, [jobAdsDataFilter]);
 
   useEffect(() => {
