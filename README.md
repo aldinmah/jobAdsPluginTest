@@ -37,6 +37,9 @@ The variable must be added before plugin initialization in order to setup custom
 		cssPluginWrapperClass: 'myWrapperClass',
 		customApplyFormURL: '',
 		useInternalApplyForm: true,
+		hidePaging: false,
+		hideFilters: false,
+		hidePhoneNumber: false,
 	}
 </script>
 </pre>
@@ -79,6 +82,21 @@ The variable must be added before plugin initialization in order to setup custom
 
 <strong>useInternalApplyForm</strong> : boolean<br>
 -if this parameter is set to true, a internal plugin form will be used for job application regardless of other settings like 'customApplyFormURL' or the form URL provided by the LeanLink API
+
+<strong>hidePaging</strong> : boolean<br>
+-parameter which is used to enable/disable paging in the job ads list page
+-set 'true' in order to disable the paging
+-set 'false' in order to enable the paging
+
+<strong>hideFilters</strong> : boolean<br>
+-parameter which is used to enable/disable filters in the job ads list page
+-set 'true' in order to disable the filters
+-set 'false' in order to enable the filters
+
+<strong>hidePhoneNumber</strong> : boolean<br>
+-parameter which is used to show/hide phone number in the job details page
+-set 'true' in order to hide the phone number
+-set 'false' in order to show the phone number
 
 
 # Development 

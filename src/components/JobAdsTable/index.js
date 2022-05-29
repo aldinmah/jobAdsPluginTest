@@ -76,10 +76,10 @@ function EnhancedTableHead(props) {
 export default function JobAdsListTable(props) {
   const [tableData, setTableData] = useState([]);
   const [order, setOrder] = useState("asc");
-  const [orderBy, setOrderBy] = useState("calories");
+  const [orderBy, setOrderBy] = useState("");
   const [page, setPage] = useState(0);
   const [compactView, setCompactView] = useState(false);
-  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [rowsPerPage, setRowsPerPage] = useState(props.globalConfig?.hidePaging?1000:10);
 
   useEffect(() => {
     if (!props.jobAdsList) prepareTableData([]);
@@ -208,16 +208,18 @@ export default function JobAdsListTable(props) {
           </TableBody>
         </Table>
       </TableContainer>
-      <TablePagination
-        rowsPerPageOptions={[5, 10, 25]}
-        component="div"
-        count={tableData.length}
-        rowsPerPage={rowsPerPage}
-        page={page}
-        onPageChange={handleChangePage}
-        onRowsPerPageChange={handleChangeRowsPerPage}
-        className="tablePaginationWrapper"
-      />
+      {!props.globalConfig?.hidePaging &&
+            <TablePagination
+              rowsPerPageOptions={[5, 10, 25]}
+              component="div"
+              count={tableData.length}
+              rowsPerPage={rowsPerPage}
+              page={page}
+              onPageChange={handleChangePage}
+              onRowsPerPageChange={handleChangeRowsPerPage}
+              className="tablePaginationWrapper"
+            />
+      }
       <FormControlLabel
         control={<Switch checked={compactView} onChange={handleChangeCompactView} />}
         label="Compact table layout"

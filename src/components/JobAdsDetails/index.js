@@ -208,7 +208,7 @@ export default function JobAdsDetails(props) {
                         {item.firstName + " " + item.lastName}
                       </span>
                     </div>
-                    {item?.phone && (
+                    {item?.phone && !props.globalConfig?.hidePhoneNumber && (
                       <div className="fullRow personInfoRow contactPersonPhone">
                         <span className="contactLabel">Phone: </span>
                         <a

@@ -415,43 +415,45 @@ export default function App(props) {
     <div className={"JobAdsApplication " + (globalConfig?.cssPluginWrapperClass ? globalConfig.cssPluginWrapperClass : "")}>
       {activeView === APP_VIEWS.JOB_ADS_LIST && (
         <div className="jobAdsListWrapper">
-          <div className="dropdownControlsWrapper">
-            <SelectBox
-              id="serviceDropdown"
-              type="service"
-              label="Service Group"
-              options={servicesListForDropdown}
-              className="dropdown serviceDropdown"
-              handleDropdownChange={handleDropdownChange}
-              value={selectedService}
-              
-            />
-            <SelectBox
-              id="professionDropdown"
-              type="profession"
-              label="Profession"
-              options={professionListForDropdown}
-              className="dropdown professionDropdown"
-              handleDropdownChange={handleDropdownChange}
-              value={selectedProfession}
-            />
-            <SelectBox
-              id="locationDropdown"
-              type="location"
-              label="Location"
-              options={locationListForDropdown}
-              className="dropdown locationDropdown"
-              handleDropdownChange={handleDropdownChange}
-              value={selectedLocation}
-            />
-            <Button 
-              variant="outlined"
-              className="btnClearFilters"
-              onClick={clearFilters}
-            >Clear</Button>
-        </div>
+          {!globalConfig?.hideFilters &&
+            <div className="dropdownControlsWrapper">
+              <SelectBox
+                id="serviceDropdown"
+                type="service"
+                label="Service Group"
+                options={servicesListForDropdown}
+                className="dropdown serviceDropdown"
+                handleDropdownChange={handleDropdownChange}
+                value={selectedService}
+              />
+              <SelectBox
+                id="professionDropdown"
+                type="profession"
+                label="Profession"
+                options={professionListForDropdown}
+                className="dropdown professionDropdown"
+                handleDropdownChange={handleDropdownChange}
+                value={selectedProfession}
+              />
+              <SelectBox
+                id="locationDropdown"
+                type="location"
+                label="Location"
+                options={locationListForDropdown}
+                className="dropdown locationDropdown"
+                handleDropdownChange={handleDropdownChange}
+                value={selectedLocation}
+              />
+              <Button 
+                variant="outlined"
+                className="btnClearFilters"
+                onClick={clearFilters}
+              >Clear</Button>
+            </div>
+          }
           <JobAdsListTable
             jobAdsList={jobAdsList}
+            globalConfig={globalConfig}
             handleUserNavigation={handleUserNavigation}
             handleJobAdSelection={handleJobAdSelection}
           />
