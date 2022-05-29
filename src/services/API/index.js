@@ -1,4 +1,4 @@
-let apiBaseUrl = process.env.REACT_APP_API_BASE_URL || 'https://staging22222.leanlink.io/public/api/'
+let apiBaseUrl = process.env.REACT_APP_API_BASE_URL
 let token = process.env.REACT_APP_API_TOKEN
 
 function handleResponse(response) {
